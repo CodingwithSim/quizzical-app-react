@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* =========== BASE ===========*/
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Karla', sans-serif;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #F5F7FB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========== MAIN CONTAINER ===========*/
+.blob-yellow {
+  position: absolute;
+  left: 70%;
+  right: 0;
+  top: -30%;
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 50%;
+}
+
+.blob-blue {
+  position: absolute;
+  left: -60%;
+  right: 0;
+  top: 60%;
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 50%;
+  z-index: 0;
+}
+
+.blob-blue-started {
+  position: absolute;
+  left: -60%;
+  right: 0;
+  top: 80%;
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 50%;
+  z-index: 0;
+  transition: 2s;
+}
+
+.blob-yellow-started {
+  position: absolute;
+  left: 70%;
+  right: 0;
+  top: -30%;
+  bottom: 0;
+  width: 80%;
+  transition: 2s;
+}
+
+
+
+.content-container {
+  max-width: 950px;
+  z-index: 1;
+}
+
+/* =========== MENU ===========*/
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  color: #293264;
+}
+
+.menu-title {
+  color: #293264;
+  font-size: 2.5rem;
+}
+
+.start-btn {
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  background-color: #4D5B9E;
+  border-radius: .5rem;
+  font-family: 'Inter';
+  font-weight: 500;
+  line-height: 19px;
+  font-size: 16px;
+}
+
+/* =========== QUIZ ===========*/
+
+
+.start-content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.end-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: .2rem;
+}
+
+.content-container {
+  padding: 0 25px;
+}
+
+.question-container {
+  margin-bottom: .65rem;
+  width: 100%;
+  text-align: left;
+  color: #293264;
+  font-family: 'Inter';
+
+}
+
+.question-title {
+  font-size: .8rem;
+  margin-bottom: .3rem;
+  font-family: 'Karla';
+}
+
+.answer {
+  background-color: transparent;
+  border: 0.794239px solid #4D5B9E;
+  border-radius: 0.3rem;
+  margin-right: .6rem;
+  padding: 4px 16px;
+  font-size: .6rem;
+}
+
+.line {
+  margin-top: .7rem;
+  width: 100%;
+  border-top: .8px solid #DBDEF0;
+}
+
+.selected {
+  background-color: #D6DBF5;
+}
+
+.check {
+  font-family: 'Inter';
+  color: white;
+  background-color: #4D5B9E;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+}
+
+.score {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 15px;
+}
+
+#correct.answer {
+  background-color: #94D7A2;
+  border: 1px solid #94D7A2;
+}
+
+#incorrect.answer.selected {
+  background-color: #F8BCBC;
+  border: 1px solid #F8BCBC;
+}
+
+#not-selected.answer {
+  color: #4D5B9E;
+  border: 1px solid #4D5B9E;
+}
+
+
+
+/* =========== BREAKPOINTS ===========*/
+
+
+@media only screen and (min-width: 350px) {
+  .question-title {
+    font-size: .85rem;
+  }
+
+  .answer {
+    font-size: .65rem;
+    margin-bottom: .3rem;
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .question-title {
+    font-size: 1.1rem;
+  }
+
+  .answer {
+    font-size: .8rem;
+    margin-bottom: .4rem;
+  }
+
+  .check {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 630px) {
+  .content-container {
+    padding: 0 32px;
+  }
+
+  .question-container {
+    margin-bottom: .85rem;
+  }
+
+  .question-title {
+    font-size: 1.3rem;
+    margin-bottom: .9rem;
+  }
+
+  .answer {
+    font-size: .9rem;
+    margin-bottom: .45rem;
+  }
+
+  .check {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .content-container {
+    padding: 0 32px;
+  }
+
+  .question-container {
+    margin-bottom: 1.2rem;
+  }
+
+  .question-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .answer {
+    font-size: .9rem;
+    margin-bottom: .45rem;
+  }
+
+  .check {
+    font-size: 1.25rem;
+  }
+}
